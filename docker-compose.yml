@@ -4,8 +4,8 @@ db:
   environment:
     MYSQL_ROOT_PASSWORD: admin
     MYSQL_DATABASE: giit
-    MYSQL_USER: yuvaraj
-    MYSQL_PASSWORD: yuvaraj
+    MYSQL_USER: example_db_user
+    MYSQL_PASSWORD: example_db_pass
   volumes:
     - ./sql:/docker-entrypoint-initdb.d
 
@@ -17,8 +17,8 @@ tomcat_1_node_1:
   #  VIRTUAL_HOST: tomcat_1.mulligan.ie
   #  VIRTUAL_PORT: 8080
     JDBC_URL: jdbc:mysql://db:3306/giit?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true
-    JDBC_USER: yuvaraj
-    JDBC_PASS: yuvaraj
+    MYSQL_USER: example_db_user
+    MYSQL_PASSWORD: example_db_pass
   volumes:
     - ./target/giit.war:/usr/local/tomcat/webapps/giit.war
   links:
@@ -32,8 +32,8 @@ tomcat_1_node_2:
   #  VIRTUAL_HOST: tomcat_1.mulligan.ie
   #  VIRTUAL_PORT: 8080
     JDBC_URL: jdbc:mysql://db:3306/giit?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true
-    JDBC_USER: yuvaraj
-    JDBC_PASS: yuvaraj
+    MYSQL_USER: example_db_user
+    MYSQL_PASSWORD: example_db_pass
   volumes:
     - ./target/giit.war:/usr/local/tomcat/webapps/giit.war
   links:
