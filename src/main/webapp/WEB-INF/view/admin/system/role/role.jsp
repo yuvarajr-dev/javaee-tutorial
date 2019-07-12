@@ -6,7 +6,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">角色管理</h1>
+            < h1  class = " page-header " > Role Management</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -14,7 +14,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        角色信息
+                        Role information
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -22,10 +22,10 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                 <tr>
-                                    <th>角色名称</th>
-                                    <th>角色描述</th>
-                                    <th>拥有的资源</th>
-                                    <th>操作</th>
+                                    < th >role name</ th >
+                                    < th >character description</ th >
+                                    < th > owned resources </ th >
+                                    < th > operation </ th >
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -36,14 +36,14 @@
                                         <td>${role.resourceIdsStr}</td>
                                         <td>
                                             <a href="${pageContext.request.contextPath}/role.do/delete?id=${role.id}"
-                                               onclick="return confirm('是否要删除该角色')">删除</a>
+                                               Onclick = " return confirm('whether you want to delete the role') " >delete</ a >
                                         </td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>
                             </table>
                             <a href="${pageContext.request.contextPath}/role.do/role_add.view" class="btn btn-primary"
-                               role="button">添加角色</a>
+                               Role = " Button " > Add Role </ A >
                         </div>
                         <!-- /.table-responsive -->
                     </div>
@@ -63,4 +63,3 @@
 <!-- /#wrapper -->
 
 <jsp:include page="/bottom.jsp"></jsp:include>
-
