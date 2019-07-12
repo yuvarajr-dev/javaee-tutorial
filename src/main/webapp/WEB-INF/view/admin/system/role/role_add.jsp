@@ -28,7 +28,7 @@
                                 <%--<input class="form-control" name="resourceIds">--%>
                                 <label></label>
                                 <button type="submit"
-                                        class="btn btn-primary form-control">添加
+                                        class="btn btn-primary form-control">Add to
                                 </button>
                             </form>
                         </div>
