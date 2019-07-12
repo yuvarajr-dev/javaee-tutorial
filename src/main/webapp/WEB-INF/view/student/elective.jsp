@@ -12,7 +12,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        已开设课程信息
+                        Course information has been created
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -20,9 +20,9 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                 <tr>
-                                    <th>课程ID</th>
-                                    <th>课程名称</th>
-                                    <th>授课老师</th>
+                                    < th > Course ID</ th >
+                                    < th > Course Name </ th >
+                                    < th >teachers</ th >
                                     <th></th>
                                 </tr>
                                 </thead>
@@ -34,7 +34,7 @@
                                         <td>${section.teacher}</td>
                                         <td>
                                             <a href="${pageContext.request.contextPath}/elective.do/add?secId=${section.secId}"
-                                               onclick="return confirm('是否选择该课')">选课</a>
+                                               Onclick = " return confirm('whether to choose this lesson') " >chouse</ a >
                                         </td>
                                     </tr>
                                 </c:forEach>
