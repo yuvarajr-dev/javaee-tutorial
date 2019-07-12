@@ -7,7 +7,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">用户管理</h1>
+            < h1  class = " page-header " > User Management</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -15,30 +15,30 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        用户信息
+                        User Info
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
                             <form action="${pageContext.request.contextPath}/user.do/update" method="post">
-                                <label name="id">用户名 : ${user.userId}</label>
+                                <label name="id">username : ${user.userId}</label>
                                 <input style="display:none" name="userId" value="${user.userId}">
 
                                 <p></p>
-                                <label>新密码</label>
+                                < label > new password </ label >
                                 <input class="form-control" name="password">
-                                <label>邮箱</label>
+                                < label >mailbox</ label >
                                 <input class="form-control" name="email">
 
                                 <div class="form-group">
-                                    <form:label path="roleIds">角色列表：</form:label>
+                                    < form:label  path = " roleIds " >list of roles:</ form:label >
                                     <form:select path="roleIds" items="${roleList}" itemLabel="description"
                                                  itemValue="id" multiple="true"/>
-                                    (按住shift键多选)
+                                    (hold down the shift key to select more)
                                 </div>
                                 <label></label>
                                 <button type="submit"
-                                        class="btn btn-primary form-control">修改
+                                        class="btn btn-primary form-control">modify
                                 </button>
                             </form>
                         </div>
