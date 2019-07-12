@@ -6,7 +6,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">添加专业</h1>
+            < h1  class = " page-header " > Add a professional</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -14,23 +14,23 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        专业信息
+                        Professional information
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
                             <form action="${pageContext.request.contextPath}/spec.do/add" method="get">
-                                <label>系名</label>
+                                <label>Department name</label>
                                 <select class="form-control" name="deptName">
                                     <c:forEach var="deptName" items="${deptNameList}">
                                         <option>${deptName}</option>
                                     </c:forEach>
                                 </select>
-                                <label>专业名</label>
+                                < label >professional name </ label >
                                 <input class="form-control" name="specName">
                                 <label></label>
                                 <button type="submit"
-                                        class="btn btn-primary form-control">添加
+                                        class="btn btn-primary form-control">Add to
                                 </button>
                             </form>
                         </div>
