@@ -26,14 +26,14 @@
                                         <table class="table table-hover ">
                                             <thead>
                                             <tr>
-                                                <th>书名</th>
+                                                < th > title </ th >
                                                 <th>Isbn</th>
-                                                <th>印刷日期</th>
-                                                <th>作者</th>
-                                                <th>出版社</th>
-                                                <th>教材类别</th>
-                                                <th>单价</th>
-                                                <th>备注</th>
+                                                < th > date of printing </ th >
+                                                < th > author </ th >
+                                                < th >publisher</ th >
+                                                < th >Textbook category</ th >
+                                                < th > unit price </ th >
+                                                < th >Remarks</ th >
                                                 <th></th>
                                             </tr>
                                             </thead>
@@ -115,7 +115,7 @@
                                             </tbody>
                                         </table>
                                         <button type="button" class="btn btn-warning"
-                                                onclick="alterAndSubmit(this)">修改
+                                                the onclick = " alterAndSubmit (the this) " > Modify
                                         </button>
                                     </div>
                                 </div>
