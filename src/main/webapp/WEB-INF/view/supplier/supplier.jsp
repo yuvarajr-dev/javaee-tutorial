@@ -6,14 +6,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">采购清单</h1>
+                < h1  class = " page-header " >Purchase List</ h1 >
             </div>
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            采购清单
+                            Purchasing List
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -23,12 +23,12 @@
                                            id="dataTables-example">
                                         <thead>
                                         <tr>
-                                            <th>书名</th>
+                                            < th > title </ th >
                                             <th>ISBN</th>
-                                            <th>印刷日期</th>
-                                            <th>作者</th>
-                                            <th>出版社</th>
-                                            <th>数量</th>
+                                            < th > date of printing </ th >
+                                            < th > author </ th >
+                                            < th >publisher</ th >
+                                            < th > number</ th >
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -67,4 +67,3 @@
 </div>
 <!-- /#wrapper -->
 <jsp:include page="/bottom.jsp"></jsp:include>
-
