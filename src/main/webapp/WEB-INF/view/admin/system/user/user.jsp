@@ -6,7 +6,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">用户管理</h1>
+            < h1  class = " page-header " > User Management</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -14,7 +14,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        用户信息
+                        User Info
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -22,10 +22,10 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                 <tr>
-                                    <th>用户名</th>
-                                    <th>密码</th>
-                                    <th>权限</th>
-                                    <th>邮箱</th>
+                                    < th >username</ th >
+                                    < th >password</ th >
+                                    < th > permissions</ th >
+                                    < th >Email</ h >
                                     <%--<th></th>--%>
                                     <th></th>
                                 </tr>
@@ -40,14 +40,14 @@
                                             <%--<td><a href="${pageContext.request.contextPath}/user.do/findById?id=${user.userId}">修改</a></td>--%>
                                         <td>
                                             <a href="${pageContext.request.contextPath}/user.do/delete?id=${user.userId}"
-                                               onclick="return confirm('是否要删除该用户')">删除</a>
+                                               Onclick = " return confirm('whether you want to delete this user') " >delete</ a >
                                         </td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>
                             </table>
                             <a href="${pageContext.request.contextPath}/user.do/user_add.view" class="btn btn-primary"
-                               role="button">添加用户</a>
+                               Role = " button " >Add user</ a >
                         </div>
                         <!-- /.table-responsive -->
                     </div>
