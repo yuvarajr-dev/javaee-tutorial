@@ -5,7 +5,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">系部管理</h1>
+            < h1  class = " page-header " > Department Management </ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -13,7 +13,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        系信息
+                        Department information
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -21,7 +21,7 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                 <tr>
-                                    <th>系名</th>
+                                    < th >system name</ th >
                                     <th></th>
                                     <th></th>
                                 </tr>
@@ -35,7 +35,7 @@
                                         </td>
                                         <td>
                                             <a href="${pageContext.request.contextPath}/dept.do/delete?deptId=${dept.deptId}"
-                                               onclick="return confirm('是否要删除该系')">删除</a>
+                                               Onclick = " return confirm('whether you want to delete the system') " >delete</ a >
                                         </td>
                                     </tr>
                                 </c:forEach>
@@ -61,4 +61,3 @@
 <!-- /#wrapper -->
 
 <jsp:include page="/bottom.jsp"></jsp:include>
-
