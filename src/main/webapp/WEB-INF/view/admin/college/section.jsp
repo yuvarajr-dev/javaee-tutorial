@@ -6,13 +6,13 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">课程安排</h1>
+            < h1  class = " page-header " > Course Schedule </ h1 >
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        已开设课程信息
+                        Course information has been created
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -21,11 +21,11 @@
 
                                 <thead>
                                 <tr>
-                                    <th>课程ID</th>
-                                    <th>课程名称</th>
-                                    <th>授课老师</th>
-                                    <th>授课周次,星期,节次</th>
-                                    <th>上课教室</th>
+                                    < th > Course ID</ th >
+                                    < th > Course Name </ th >
+                                    < th >teachers</ th >
+                                    < th >Teaching week, week, session</ th >
+                                    < th > Classroom </ th >
                                     <th></th>
                                 </tr>
                                 </thead>
@@ -43,7 +43,7 @@
                                         </c:forEach>
                                         <td>
                                             <a href="${pageContext.request.contextPath}/section.do/delete?secId=${section.secId}"
-                                               onclick="return confirm('是否要删除该开课')">删除</a>
+                                               Onclick = " return confirm('whether to delete the class') " >delete</ a >
                                         </td>
                                     </tr>
                                 </c:forEach>
@@ -58,8 +58,8 @@
             </div>
             <!-- /.col-lg-12 -->
         </div>
-        <a href="${pageContext.request.contextPath}/section.do/section_add.view" class="btn btn-primary" role="button">开设课程</a>
-        <a href="${pageContext.request.contextPath}/section.do/section_timetable_add.view" class="btn btn-primary" role="button">添加时段</a>
+        <a href="${pageContext.request.contextPath}/section.do/section_add.view" class="btn btn-primary" role="button">Opening a course</a>
+        <a href="${pageContext.request.contextPath}/section.do/section_timetable_add.view" class="btn btn-primary" role="button">Add time</a>
 
         <!-- /.container-fluid -->
     </div>
