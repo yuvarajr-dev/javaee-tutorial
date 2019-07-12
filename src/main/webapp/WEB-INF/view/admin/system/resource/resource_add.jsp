@@ -6,7 +6,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">用户管理</h1>
+            < h1  class = " page-header " > User Management</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -14,22 +14,22 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        用户信息
+                        User Info
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
                             <form action="${pageContext.request.contextPath}/role.do/add" method="post">
-                                <label>角色名</label>
+                                < label > role name </ label >
                                 <input class="form-control" name="role">
-                                <label>角色描述</label>
+                                < label > role description </ label >
                                 <input class="form-control" name="description">
-                                <label>拥有的资源</label>
+                                < label > owned resources </ label >
                                 <input class="form-control" name="resourceIds">
 
                                 <label></label>
                                 <button type="submit"
-                                        class="btn btn-primary form-control">添加
+                                        class="btn btn-primary form-control">Add to
                                 </button>
                             </form>
                         </div>
@@ -52,5 +52,3 @@
 
 
 <jsp:include page="${request.getContextPath}/bottom.jsp"></jsp:include>
-
-
