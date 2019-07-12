@@ -42,24 +42,24 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="login-panel panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">请登录</h3>
+                    <h3 class="panel-title">please sign in</h3>
                 </div>
                 <div class="panel-body">
                     <form role="form" action="${pageContext.request.contextPath}/login" method="post">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="账户名" name="username" autofocus>
+                                <input class="form-control" placeholder="account name" name="username" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="密码" name="password" type="password">
+                                <input class="form-control" placeholder="password" name="password" type="password">
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="remember" type="checkbox" value="RememberMe">记住我
+                                    <input name="remember" type="checkbox" value="RememberMe">remember me
                                 </label>
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
-                            <input type="submit" value="登录" class="btn btn-primary form-control">
+                            <input type="submit" value="log in" class="btn btn-primary form-control">
                         </fieldset>
                     </form>
                 </div>
