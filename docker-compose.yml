@@ -53,7 +53,7 @@ nginx:
   volumes:
     - ./nginx:/etc/nginx/conf.d
   ports:
-    - "80:80"
+    - "8081:80"
  #  - "443:443"
  # volumes:
  #   - /var/run/docker.sock:/tmp/docker.sock:ro
