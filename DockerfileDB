@@ -1,0 +1,12 @@
+FROM mysql:latest
+
+ENV MYSQL_ROOT_PASSWORD: admin \
+    MYSQL_DATABASE: giit \
+    MYSQL_USER: example_db_user \
+    MYSQL_PASSWORD: example_db_pass \
+
+VOLUME  ["./sql","/docker-entrypoint-initdb.d"]
+
+EXPOSE 3306
+
+CMD ["/usr/bin/mysqld_safe"]
