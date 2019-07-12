@@ -7,14 +7,14 @@
 
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">班级管理</h1>
+            < h1  class = " page-header " >Class Management</ h1 >
         </div>
         <%--<c:forEach var="entrty" items="${classBelongSpec}">--%>
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        班级信息
+                        Class information
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -23,8 +23,8 @@
 
                                 <thead>
                                 <tr>
-                                    <th>所属专业</th>
-                                    <th>班级号</th>
+                                    < th >Professional</ th >
+                                    < th > class number </ th >
                                     <th></th>
                                 </tr>
                                 </thead>
@@ -36,7 +36,7 @@
                                         <td>${clazz.clazzId}</td>
                                         <td>
                                             <a href="${pageContext.request.contextPath}/clazz.do/delete?clazzId=${clazz.clazzId}"
-                                               onclick="return confirm('是否要删除该专业')">删除</a>
+                                               Onclick = " return confirm('whether you want to delete the professional') " >delete</ a >
                                         </td>
                                     </tr>
                                 </c:forEach>
@@ -56,7 +56,7 @@
         <%--</c:forEach>--%>
 
     </div>
-    <a href="${pageContext.request.contextPath}/clazz.do/clazz_add.view" class="btn btn-primary" role="button">添加班级</a>
+    <a href="${pageContext.request.contextPath}/clazz.do/clazz_add.view" class="btn btn-primary" role="button">Add class</a>
     <!-- /.container-fluid -->
 </div>
 </div>
@@ -65,4 +65,3 @@
 <!-- /#wrapper -->
 
 <jsp:include page="/bottom.jsp"></jsp:include>
-
