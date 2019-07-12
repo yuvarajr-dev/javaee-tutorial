@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>桂林电子科技大学教材订购系统</title>
+    < title >Guilin University of Electronic Science and Technology Textbook Ordering System</ title >
 
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">桂林电子科技大学教材订购系统</a>
+            < a  class = " navbar-brand "  href = " # " > Guilin University of Electronic Technology textbook ordering system</ a >
         </div>
         <!-- /.navbar-header -->
 
@@ -60,11 +60,11 @@
                     <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="${pageContext.request.contextPath}/account.do/profile.view"><i class="fa fa-user fa-fw"></i> 用户设置</a>
+                    <li><a href="${pageContext.request.contextPath}/account.do/profile.view"><i class="fa fa-user fa-fw"></i> user settings</a>
                     </li>
 
                     <li class="divider"></li>
-                    <li><a href="${pageContext.request.contextPath}/logout"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                    <li><a href="${pageContext.request.contextPath}/logout"><i class="fa fa-sign-out fa-fw"></i> drop out</a>
                     </li>
                 </ul>
                 <!-- /.dropdown-user -->
@@ -77,7 +77,7 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="${pageContext.request.contextPath}/supplier.do/supplier.view"> 采购单</a>
+                        <a href="${pageContext.request.contextPath}/supplier.do/supplier.view"> Purchase Order</a>
                     </li>
                 </ul>
             </div>
