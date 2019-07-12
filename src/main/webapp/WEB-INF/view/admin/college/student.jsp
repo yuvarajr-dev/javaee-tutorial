@@ -5,7 +5,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">学生管理</h1>
+            < h1  class = " page-header " > Student Management</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -13,7 +13,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        学生信息
+                        student information
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -21,14 +21,14 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                 <tr>
-                                    <th>学号</th>
-                                    <th>姓名</th>
-                                    <th>身份证号</th>
-                                    <th>性别</th>
-                                    <th>电话号码</th>
-                                    <th>班级</th>
-                                    <th>年级</th>
-                                    <th>生源地</th>
+                                    < th > student number </ th >
+                                    < th >Name</ th >
+                                    < th > ID number </ th >
+                                    < th >sex</ th >
+                                    < th >phone number</ th >
+                                    < th > class</ th >
+                                    < th >grade</ h >
+                                    < th > student source</ th >
                                     <th></th>
                                     <th></th>
                                 </tr>
@@ -49,7 +49,7 @@
                                         </td>
                                         <td>
                                             <a href="${pageContext.request.contextPath}/student.do/delete?studentId=${student.studentId}"
-                                               onclick="return confirm('是否要删除该学生信息')">删除</a>
+                                               Onclick = " return confirm('whether you want to delete this student information') " >delete</ a >
                                         </td>
                                     </tr>
                                 </c:forEach>
@@ -75,4 +75,3 @@
 <!-- /#wrapper -->
 
 <jsp:include page="/bottom.jsp"></jsp:include>
-
