@@ -7,7 +7,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">用户管理</h1>
+            < h1  class = " page-header " > User Management</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -15,19 +15,19 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        用户信息
+                        User Info
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
                             <form action="${pageContext.request.contextPath}/user.do/add" method="post">
-                                <label>用户名</label>
+                                < label >username</ label >
                                 <input class="form-control" name="userId">
-                                <label>密码</label>
+                                < label >password</ label >
                                 <input class="form-control" name="password">
-                                <label>邮箱</label>
+                                < label >mailbox</ label >
                                 <input class="form-control" name="email">
-                                <label>角色列表(按住shift键多选)</label>
+                                < label >list of characters (hold down the shift key to select multiple) </ label >
                                 <select multiple="true" class="form-control" name="roleIds">
                                     <c:forEach var="role" items="${roleList}">
                                         <option value="${role.id}">${role.description}</option>
@@ -36,7 +36,7 @@
 
                                 <label></label>
                                 <button type="submit"
-                                        class="btn btn-primary form-control">添加
+                                        class="btn btn-primary form-control">Add to
                                 </button>
                             </form>
                         </div>
