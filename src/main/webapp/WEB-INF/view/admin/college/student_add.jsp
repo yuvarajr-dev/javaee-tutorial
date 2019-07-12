@@ -6,7 +6,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">学生管理</h1>
+            < h1  class = " page-header " > Student Management</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -14,39 +14,39 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        学生信息
+                        student information
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
                             <form action="${pageContext.request.contextPath}/student.do/add" method="post"
                                   enctype="multipart/form-data">
-                                <label>学号(作为账户登录)</label>
+                                < label > student number (login as an account) </ label >
                                 <input class="form-control" name="studentId">
-                                <label>密码</label>
+                                < label >password</ label >
                                 <input class="form-control" name="password">
-                                <label>姓名</label>
+                                <label>Name</label>
                                 <input class="form-control" name="studentName">
-                                <label>身份证号</label>
+                                < label > ID number </ label >
                                 <input class="form-control" name="idCard">
-                                <label>性别</label>
+                                < label > gender </ label >
                                 <select class="form-control" name="gender">
-                                    <option>男</option>
-                                    <option>女</option>
+                                    <option>male</option>
+                                    <option>Female</option>
                                 </select>
-                                <label>联系电话</label>
+                                < label > contact number </ label >
                                 <input class="form-control" name="telephoneNumber">
-                                <label>班级</label>
+                                < label >Class </ label >
                                 <input class="form-control" name="className">
-                                <label>年级</label>
+                                < label >year </ label >
                                 <input class="form-control" name="year">
-                                <label>生源地</label>
+                                < label > Living place</ label >
                                 <input class="form-control" name="studentOriginBase">
-                                <label>照片</label>
+                                < label >photo </ label >
                                 <input name="pic" type="file">
                                 <label></label>
                                 <button type="submit"
-                                        class="btn btn-primary form-control">添加
+                                        class="btn btn-primary form-control">Add to
                                 </button>
                             </form>
                         </div>
