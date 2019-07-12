@@ -22,7 +22,7 @@ tomcat_1_node_1:
     MYSQL_USER: example_db_user
     MYSQL_PASSWORD: example_db_pass
   volumes:
-    - ./target/giit.war:/usr/local/tomcat/webapps/giit.war
+    - ./target/:/usr/local/tomcat/webapps/
  # ports:
  #   - "8080:8080"
   links:
@@ -39,7 +39,7 @@ tomcat_1_node_2:
     MYSQL_USER: example_db_user
     MYSQL_PASSWORD: example_db_pass
   volumes:
-    - ./target/giit.war:/usr/local/tomcat/webapps/giit.war
+    - ./target/:/usr/local/tomcat/webapps/
   #ports:
   #  - "8080:8080"
   links:
