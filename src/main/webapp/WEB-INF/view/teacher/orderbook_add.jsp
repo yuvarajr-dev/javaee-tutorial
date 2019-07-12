@@ -28,14 +28,14 @@
                                             <table class="table table-hover table-responsive">
                                                 <thead>
                                                 <tr>
-                                                    <th>书名</th>
+                                                    < th > title </ th >
                                                     <th>Isbn</th>
-                                                    <th>印刷日期</th>
-                                                    <th>作者</th>
-                                                    <th>出版社</th>
-                                                    <th>教材类别</th>
-                                                    <th>单价</th>
-                                                    <th>备注</th>
+                                                    < th > date of printing </ th >
+                                                    < th > author </ th >
+                                                    < th >publisher</ th >
+                                                    < th >Textbook category</ th >
+                                                    < th > unit price </ th >
+                                                    < th >Remarks</ th >
                                                 </tr>
                                                 </thead>
                                                 <tbody>
@@ -89,10 +89,10 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-warning">提交
+                        <button type="submit" class="btn btn-warning">Submit
                         </button>
                         <button type="button" class="btn btn-primary pull-right" id="btn_alter"
-                                onclick="addCourse(this)">添加课程
+                                onclick = " addCourse (the this) " > add courses
                         </button>
                     </form>
                 </div>
