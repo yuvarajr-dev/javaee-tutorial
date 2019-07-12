@@ -8,6 +8,8 @@ db:
     MYSQL_PASSWORD: example_db_pass
   volumes:
     - ./sql:/docker-entrypoint-initdb.d
+  ports:
+    - "3306:3306"
 
 # First node of the first Tomcat virtual host.
 tomcat_1_node_1:
@@ -21,6 +23,8 @@ tomcat_1_node_1:
     MYSQL_PASSWORD: example_db_pass
   volumes:
     - ./target/giit.war:/usr/local/tomcat/webapps/
+  ports:
+    - "8080:8080"
   links:
     - db
 
@@ -36,6 +40,8 @@ tomcat_1_node_2:
     MYSQL_PASSWORD: example_db_pass
   volumes:
     - ./target/giit.war:/usr/local/tomcat/webapps/
+  ports:
+    - "8080:8080"
   links:
     - db
 
