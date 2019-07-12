@@ -5,7 +5,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">课程管理</h1>
+            < h1  class = " page-header " > Course Management</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -14,7 +14,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        课程信息
+                        course information
                     </div>
 
                     <!-- /.panel-heading -->
@@ -24,10 +24,10 @@
 
                                 <thead>
                                 <tr>
-                                    <th>名称</th>
-                                    <th>类型</th>
-                                    <th>学分</th>
-                                    <th>所属专业</th>
+                                    < th > name</ th >
+                                    < th >type</ th >
+                                    < th > credits</ th >
+                                    < th >Professional</ th >
                                     <th></th>
                                 </tr>
                                 </thead>
@@ -40,7 +40,7 @@
                                         <td>${course.speciality}</td>
                                         <td>
                                             <a href="${pageContext.request.contextPath}/course.do/delete?courseTitle=${course.courseTitle}"
-                                               onclick="return confirm('是否要删除该课')">删除</a>
+                                               Onclick = " return confirm('whether you want to delete the lesson') " >delete</ a >
                                         </td>
                                     </tr>
                                 </c:forEach>
@@ -66,4 +66,3 @@
 <!-- /#wrapper -->
 
 <jsp:include page="/bottom.jsp"></jsp:include>
-
