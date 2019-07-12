@@ -5,7 +5,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">开设课程</h1>
+            < h1  class = " page-header " > Courses</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -14,33 +14,33 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        开设课程
+                        Opening a course
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
                             <form action="${pageContext.request.contextPath}/section.do/addTimetable" method="get" class="form-group">
-                                <label>课程id</label>
+                                <label>Course id</label>
                                 <input class="form-control" name="secId">
-                                <label>周次(输入格式1,2,3,4,5,6,7)</label>
+                                < label >week (input format 1, 2, 3, 4, 5, 6, 7) </ label >
                                 <input class="form-control" name="weeks">
-                                <label>星期</label>
+                                < label >weeks</ label >
                                 <select class="form-control" name="week">
-                                    <option>星期一</option>
-                                    <option>星期二</option>
-                                    <option>星期三</option>
-                                    <option>星期四</option>
-                                    <option>星期五</option>
-                                    <option>星期六</option>
-                                    <option>星期天</option>
+                                    < option >Monday</ option >
+                                    < option >Tuesday</ option >
+                                    < option >Wednesday</ option >
+                                    < option >Thursday</ option >
+                                    < option > Friday </ option >
+                                    < option > Saturday </ option >
+                                    < option >Sunday</ option >
                                 </select>
-                                <label>节次(输入格式1,2,3,4,5,6,7)</label>
+                                < label > section (input format 1, 2, 3, 4, 5, 6, 7) </ label >
                                 <input class="form-control" name="time">
-                                <label>教室</label>
+                                <label>Classroom</label>
                                 <input class="form-control" name="classroom">
                                 <label></label>
                                 <button type="submit"
-                                        class="btn btn-primary form-control">添加时段
+                                        Class = " btn btn-primary form-control " > add time
                                 </button>
                             </form>
                         </div>
