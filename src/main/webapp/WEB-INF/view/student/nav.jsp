@@ -60,11 +60,11 @@
                     <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="${pageContext.request.contextPath}/account.do/profile.view"><i class="fa fa-user fa-fw"></i> 用户设置</a>
+                    <li><a href="${pageContext.request.contextPath}/account.do/profile.view"><i class="fa fa-user fa-fw"></i> Personal User Settings</a>
                     </li>
 
                     <li class="divider"></li>
-                    <li><a href="${pageContext.request.contextPath}/logout"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                    <li><a href="${pageContext.request.contextPath}/logout"><i class="fa fa-sign-out fa-fw"></i> Exit</a>
                     </li>
                 </ul>
                 <!-- /.dropdown-user -->
@@ -77,7 +77,7 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="${pageContext.request.contextPath}/main.do/student"> 主页</a>
+                        <a href="${pageContext.request.contextPath}/main.do/student"> Homepage </a>
                     </li>
                     <li>
                         < a  href = " / " > Personal Information</ a >
@@ -86,7 +86,7 @@
                         < a  href = " / " > Class schedule</ a >
                     </li>
                     <li>
-                        <a href="${pageContext.request.contextPath}/elective.do/elective.view"> 选课</a>
+                        <a href="${pageContext.request.contextPath}/elective.do/elective.view"> Elective course</a>
                     </li>
 
                 </ul>
