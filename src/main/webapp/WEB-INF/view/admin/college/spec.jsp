@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">专业管理</h1>
+            < h1  class = " page-header " >Professional Management</ h1 >
         </div>
         <c:forEach var="entry" items="${deptAndSpec}">
             <div class="row">
@@ -22,7 +22,7 @@
                                 <table class="table table-striped table-bordered table-hover">
                                     <thead>
                                     <tr>
-                                        <th>专业名</th>
+                                        < th >professional name</ th >
                                         <th></th>
                                         <th></th>
                                     </tr>
@@ -36,7 +36,7 @@
                                             </td>
                                             <td>
                                                 <a href="${pageContext.request.contextPath}/spec.do/delete?specName=${specName}"
-                                                   onclick="return confirm('是否要删除该专业')">删除</a>
+                                                   Onclick = " return confirm('whether you want to delete the professional') " >delete</ a >
                                             </td>
                                         </tr>
                                     </c:forEach>
@@ -64,4 +64,3 @@
 <!-- /#wrapper -->
 
 <jsp:include page="/bottom.jsp"></jsp:include>
-
