@@ -6,7 +6,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">修改专业信息</h1>
+            < h1  class = " page-header " >Modify professional information</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -14,22 +14,22 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        专业信息
+                        Professional information
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
                             <form action="${pageContext.request.contextPath}/spec.do/update" method="get">
-                                <label name="id">专业名 : ${param.get("specName")}</label>
+                                <label name="id">Professional name : ${param.get("specName")}</label>
                                 <input style="display:none" name="specName"
                                        value="${param.get("specName")}">
 
                                 <p></p>
-                                <label>新专业名</label>
+                                < label > new professional name </ label >
                                 <input class="form-control" name="newSpecName">
                                 <label></label>
                                 <button type="submit"
-                                        class="btn btn-primary form-control">修改
+                                        class="btn btn-primary form-control">modify
                                 </button>
                             </form>
                         </div>
