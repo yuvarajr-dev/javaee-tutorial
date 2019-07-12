@@ -7,13 +7,13 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">已添加教材</h1>
+            < h1  class = " page-header " >Textbook added</ h1 >
         </div>
         <div class="row" id="addedBookContainer">
             <jsp:include page="/orderbook.do/orderbook_added.view"></jsp:include>
         </div>
         <div>
-            <h1 class="page-header">添加教材</h1>
+            < h1  class = " page-header " >Add a textbook</ h1 >
         </div>
         <jsp:include page="/orderbook.do/orderbook_add.view"></jsp:include>
     </div>
@@ -43,14 +43,14 @@
                 <table class="table table-hover table-responsive">
                     <thead>
                     <tr>
-                        <th>书名</th>
+                        < th > title </ th >
                         <th>Isbn</th>
-                        <th>印刷日期</th>
-                        <th>作者</th>
-                        <th>出版社</th>
-                        <th>教材类别</th>
-                        <th>单价</th>
-                        <th>备注</th>
+                        < th > date of printing </ th >
+                        < th > author </ th >
+                        < th >publisher</ th >
+                        < th >Textbook category</ th >
+                        < th > unit price </ th >
+                        < th >Remarks</ th >
                     </tr>
                     </thead>
                     <tbody>
@@ -129,12 +129,10 @@
     });
 </script>
 <script>
-
     function alterAndSubmit(btn) {
-        var form = btn.form;
-        if (btn.innerText == "提交修改") {
+        was form =  btn . form ;
+        IF ( BTN . the innerText  ==  " Submit Review " ) {
             var changedItems = form.getElementsByClassName("changedItem");
-
             for (var i = 0; i < changedItems.length; i++) {
                 var item = changedItems[i].children;
                 var newValue = item.newValue;
@@ -159,11 +157,9 @@
             }
             form.changedInfo.secId = btn.form[0].value;
             var alterItemRequest = new XMLHttpRequest();
-
             alterItemRequest.open("POST", "${pageContext.request.contextPath}/orderbook.do/update", true);
             alterItemRequest.setRequestHeader("Content-type", "application/json");
             alterItemRequest.send(JSON.stringify(form.changedInfo));
-
             alterItemRequest.onreadystatechange = function () {
                 if (alterItemRequest.readyState == 4 && alterItemRequest.status == 200) {
                     var refreshFormRequest = new XMLHttpRequest();
@@ -177,7 +173,6 @@
                 }
             }
         } else {
-
             form.changedInfo =
             {
                 "secId": "",
@@ -202,16 +197,15 @@
                 button[i].defaultValue = button[i].value;
                 button[i].newValue = button[i].value;
             }
-            btn.innerText = "提交修改";
+            Btn . innerText  =  " submit modification " ;
         }
     }
 </script>
 <script>
     function deleteRow(btn) {
         var trNode = btn.parentNode.parentNode;
-        var tbodyNode = trNode.parentNode;
+        var tbodyNode =  trNode . parentNode ;
         var items = btn.parentNode.parentNode.children;
-
         btn.form.changedInfo.deleteItemList.push({
             "bookTitle": items[0].firstElementChild.value,
             "isbn": items[1].firstElementChild.value,
@@ -223,8 +217,6 @@
             "remark": items[7].firstElementChild.value
         });
         tbodyNode.removeChild(trNode);
-
-
     }
 </script>
 <script>
@@ -243,7 +235,7 @@
 </script>
 <script>
     var courseCount = ${courseCount};
-    var count = 1;
+    var count =  1 ;
     function addCourse(btn) {
         var formNode = document.getElementById("panelContainer");
         var panelNode = document.getElementById("panel");
@@ -251,16 +243,14 @@
         copyRowNode.removeAttribute("style");
         copyRowNode.removeAttribute("id");
         var formItem = copyRowNode.querySelectorAll("*[name='form']");
-        <!--利用这个进行区分不同的表单数据-->
-
+        <!-- Use this to distinguish different form data -->
         ++count;
         for (var i = 0; i < formItem.length; i++) {
             formItem[i].name = "form" + count;
         }
         formNode.appendChild(copyRowNode);
-
         if (count == courseCount) {
-            btn.innerText = "已达最大授课数目"
+            Btn . innerText  =  "The maximum number of lectures has been reached "
             btn.disabled = true;
             return;
         }
