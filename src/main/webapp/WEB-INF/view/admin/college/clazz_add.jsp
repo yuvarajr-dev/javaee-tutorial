@@ -6,7 +6,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">添加班级</h1>
+            < h1  class = " page-header " >Add class</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -14,24 +14,24 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        班级信息
+                        Class information
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
                             <form action="${pageContext.request.contextPath}/clazz.do/add" method="get">
-                                <label>所属院系</label>
+                                < label > belongs to the department </ label >
                                 <select onchange="test(this)" class="form-control" name="deptName">
-                                    <option>-请选择-</option>
+                                    < option > - please select - </ option >
                                     <c:forEach var="deptName" items="${deptNameList}">
                                         <option>${deptName}</option>
                                     </c:forEach>
                                 </select>
-                                <label>所属专业</label>
+                                < label > belongs to the profession </ label >
                                 <select id="spec" class="form-control" name="specName">
-                                    <option>-请选择-</option>
+                                    < option > - please select - </ option >
                                 </select>
-                                <label>开设年份</label>
+                                < label >year of opening </ label >
                                 <select class="form-control" name="year">
                                     <c:forEach var="term" items="${termList}">
                                         <option value="${term.val}">${term.text}</option>
@@ -44,7 +44,7 @@
                                 <%--</select>--%>
                                 <label></label>
                                 <button type="submit"
-                                        class="btn btn-primary form-control">添加
+                                        class="btn btn-primary form-control">Add to
                                 </button>
                             </form>
                         </div>
@@ -65,78 +65,61 @@
 </div>
 <!-- /#wrapper -->
 <script>
-
-
-    var deptAndSpec = ${deptAndSpecJson}
-
+    var deptAndSpec = $ {deptAndSpecJson}
             function setSpec(dept) {
-                setSelectOption('spec', deptAndSpec[dept], '-请选择-');
+                setSelectOption ( ' spec ' , deptAndSpec[dept], ' -Please select - ' );
             }
-
     /*
-     * 说明：将传入的选项值加入到指定的下拉列表中
-     * @param {String || Object]} selectObj 目标下拉选框的名称或对象，必须
+     * Description: Add the passed option value to the specified drop-down list
+     * @param {String || Object]} selectObj The name or object of the target drop-down box must be
      */
     function removeOptions(selectObj) {
         if (typeof selectObj != 'object') {
             selectObj = document.getElementById(selectObj);
         }
-
-        // 原有选项计数
+        / / The original option count
         var len = selectObj.options.length;
-
-        for (var i = 0; i < len; i++) {
-            // 移除当前选项
+        for ( was i =  0 ; i < len; i ++ ) {
+            / / Remove the current option
             selectObj.options[0] = null;
         }
     }
-
     /*
-     * 说明：设置传入的选项值到指定的下拉列表中
+     * Description: Set the passed option value to the specified drop-down list
      *
-     * @param {String || Object]} selectObj 目标下拉选框的名称或对象，必须
-     * @param {Array} optionList 选项值设置 格式：[{txt:'北京', val:'010'}, {txt:'上海', val:'020'}] ，必须
-     * @param {String} firstOption 第一个选项值，如：“请选择”，可选，值为空
-     * @param {String} selected 默认选中值，可选
+     * @param {String || Object]} selectObj The name or object of the target drop-down box must be
+     * @param {Array} optionList option value format: [{txt: 'Beijing', val: '010'}, {txt: 'Shanghai', val: '020'}], must
+     * @param {String} firstOption The first option value, such as: "Please select", optional, the value is null
+     * @param {String} selected by default, optional
      */
     function setSelectOption(selectObj, optionList, firstOption, selected) {
         if (typeof selectObj != 'object') {
             selectObj = document.getElementById(selectObj);
         }
-
-        // 清空选项
+        // Clear option
         removeOptions(selectObj);
-
-        // 选项计数
-        var start = 0;
-
-        // 如果需要添加第一个选项
+        // option count
+        where start =  0 ;
+        / / If you need to add the first option
         if (firstOption) {
             selectObj.options[0] = new Option(firstOption);
-
-            // 选项计数从 1 开始
+            // Option count starts at 1
             start++;
         }
-
         var len = optionList.length;
-
-        for (var i = 0; i < len; i++) {
-            // 设置 option
+        for ( was i =  0 ; i < len; i ++ ) {
+            / / Set option
             selectObj.options[start] = new Option(optionList[i]);
-
-            // 选中项
+            // Selected item
             if (selected == optionList[i]) {
                 selectObj.options[start].selected = true;
             }
-
-            // 计数加 1
+            // Count plus 1
             start++;
         }
-
     }
     function test(btn) {
         setSpec(btn.options[btn.selectedIndex].text);
     }
-
 </script>
 <jsp:include page="/bottom.jsp"></jsp:include>
