@@ -5,7 +5,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">系管理</h1>
+            < h1  class = " page-header " > Department Management</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -13,7 +13,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        系管理
+                        Department management
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -23,7 +23,7 @@
                                 <input class="form-control" name="deptName">
                                 <label></label>
                                 <button type="submit"
-                                        class="btn btn-primary form-control">添加
+                                        class="btn btn-primary form-control">Add to
                                 </button>
                             </form>
                         </div>
