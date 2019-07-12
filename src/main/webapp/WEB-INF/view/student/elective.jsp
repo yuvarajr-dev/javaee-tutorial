@@ -6,7 +6,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">选课</h1>
+            <h1 class="page-header">Elective course</h1>
         </div>
         <div class="row">
             <div class="col-lg-12">
