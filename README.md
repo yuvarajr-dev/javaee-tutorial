@@ -1,80 +1,75 @@
-# 简介
-这是个简单的教务系统网站,并且结合了图书订购功能,希望这个小DEMO能对大家学习有帮助
+Introduction
+This is a simple educational system website, and combined with the book ordering function, I hope this small DEMO can help everyone learn.
 
-# 使用技术 
+Use technology
+IoC container: spring
 
-IoC容器:spring
+Web framework: springmvc
 
-web框架:springmvc
+Orm framework: mybatis
 
-orm框架:mybatis
+Security framework: shiro
 
-安全框架:shiro
+Data source: dbcp2
 
-数据源:dbcp2
-
-日志: sl4j
+Log: sl4j
 
 Json: Gson
 
-前端框架:Bootstrap
+Front End Framework: Bootstrap
 
-# 起步:
+Start:
+1. Initialize the project
 
-1.初始化项目
+1) Download Mysql, create a database name for giit, import create.sql and populate.sql, run sql directly
 
-1)下载Mysql,创建一个数据库名字为giit,导入create.sql与populate.sql,直接运行其中sql即可
+2) Download Tomcat
 
-2)下载Tomcat
+3) Import the project using Intellij Idea, then configure the project startup mode, use the Tomcat just downloaded
 
-3)使用Intellij Idea导入项目,之后配置项目启动方式,使用刚才下载好的Tomcat
-  
-4)运行
+4) running
 
-![image](https://pic4.zhimg.com/v2-87231f2eb533cdab3d3e04c7a89457af_b.png)
+image
 
-# 使用简介:
+Introduction to use:
+1. Introduction to permissions:
 
-1.权限介绍:
+According to the imported populate.sql, there are four permission roles when running the website initially:
 
-根据导入的populate.sql,运行网站初始时会存在四个权限角色:
+1). Administrator, account is admin
 
-1).管理员,账号为admin
+2). Student, account number is student
 
-2).学生,账号为student
+3). Teacher, account number is teache
 
-3).教师,账号为teache
+4). Supplier, account number is supplier
 
-4).供应商,账号为supplier
+The password is 123456
 
-*密码均为123456*
+Features:
+1. Basic information function:
+Some basic school information, that is, entity-relationships in the database, can be set up, and then more complex functions can be performed based on these basic relationship information. For example, after class selection, how many students can select this course, only the teacher submits The total number of books counted after the book can be obtained through the relationship
 
-# 功能介绍:
-##  1.基本信息功能:
-其中可以设置一些基本的学校信息,也就是数据库中的实体-关系,之后就可以基于这些基本的关系信息进行更加复杂的功能,例如选课后可以记录多少学生选择了这门课程,只会教师提交图书后计算图书总数可以通过其中的关系得到
+1) Department information
 
-1)系部信息
+2) Professional information
 
-2)专业信息
+3) Class information
 
-3)班级信息
+4) Course Information
 
-4)课程信息
+5) Student Management
 
-5)学生管理
+image
 
-![image](https://pic1.zhimg.com/v2-44688d7a989ae25d9db6767a50a208f8_b.png)
+2. Book management function:
+1) Teacher uploads books
 
+2) Secretary approves books
 
-## 2.图书管理功能:
-1)教师上传图书
+3) View reviewed books
 
-2)秘书审批图书
+image
 
-3)查看已审核图书
-
-![image](https://pic3.zhimg.com/v2-3ff2f0da17e8609f85da3b61671cf0de_b.png)
-
-# 数据库表结构:
-![image](http://7xi78h.com1.z0.glb.clouddn.com/db.png)
-
+Database table structure:
+image
