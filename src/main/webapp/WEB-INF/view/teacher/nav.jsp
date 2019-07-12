@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>桂林电子科技大学教材订购系统</title>
+    < title >Guilin University of Electronic Science and Technology Textbook Ordering System</ title >
 
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">桂林电子科技大学教材订购系统</a>
+            < a  class = " navbar-brand "  href = " # " > Guilin University of Electronic Technology textbook ordering system</ a >
         </div>
         <!-- /.navbar-header -->
 
@@ -80,7 +80,7 @@
                         <a href="${pageContext.request.contextPath}/main.do/teacher"> 主页</a>
                     </li>
                     <li>
-                        <a href="#"> 成绩录入</a>
+                        < a  href = " # " > Grade entry</ a >
                     </li>
                     <li>
                         <a href="${pageContext.request.contextPath}/orderbook.do/orderbook.view"> 教材添加</a>
