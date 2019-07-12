@@ -5,7 +5,7 @@
 <div id="page-wrapper">
     <div class="container-fluid">
         <div>
-            <h1 class="page-header">开设课程</h1>
+            < h1  class = " page-header " > Courses</ h1 >
         </div>
         <div class="panel-heading">
         </div>
@@ -14,30 +14,30 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        开设课程
+                        Opening a course
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
                             <form action="${pageContext.request.contextPath}/section.do/add" method="get"
                                   class="form-group">
-                                <label>课程名称</label>
+                                < label > course name </ label >
                                 <select class="form-control" name="courseTitle">
                                     <c:forEach var="courseTitle" items="${courseTitleList}">
                                         <option>${courseTitle}</option>
                                     </c:forEach>
                                 </select>
 
-                                <label>授课老师</label>
+                                < label >teacher </ label >
                                 <select class="form-control" name="staffId">
                                     <c:forEach var="staff" items="${staffList}">
                                         <option value="${staff.staffId}">${staff.staffName}</option>
                                     </c:forEach>
                                 </select>
 
-                                <label>可选课人数</label>
+                                < label > number of optional courses </ label >
                                 <input class="form-control" name="limitCount">
-                                <label>开设时间</label>
+                                < label > opening time </ label >
                                 <select class="form-control" name="year">
                                     <c:forEach var="term" items="${termList}">
                                         <option value="${term.val}">${term.text}</option>
@@ -45,7 +45,7 @@
                                 </select>
                                 <label></label>
                                 <button type="submit"
-                                        class="btn btn-primary form-control">开设课程
+                                        Class = " btn btn-primary form-control " > Courses
                                 </button>
                             </form>
                         </div>
