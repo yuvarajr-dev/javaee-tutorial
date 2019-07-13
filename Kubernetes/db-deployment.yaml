@@ -1,12 +1,12 @@
-apiVersion: extensions/v1beta1
+apiVersion: v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose --file Doc/docker-compose.yml convert
-    kompose.version: 1.17.0 (a74acad)
-  creationTimestamp: null
+#  annotations:
+#    kompose.cmd: kompose --file Doc/docker-compose.yml convert
+#    kompose.version: 1.17.0 (a74acad)
+#  creationTimestamp: null
   labels:
-    io.kompose.service: db
+    name: db
   name: db
 spec:
   replicas: 1
@@ -16,7 +16,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        io.kompose.service: db
+        name: db
     spec:
       containers:
       - env:
@@ -31,14 +31,25 @@ spec:
         image: mysql:latest
         name: db
         ports:
-        - containerPort: 3306
-        resources: {}
+        - name: db
+          containerPort: 3306
+#        resources: {}
         volumeMounts:
         - mountPath: /docker-entrypoint-initdb.d
           name: task-pv-volume
       restartPolicy: Always
-      volumes:
-      - name: task-pv-volume
-        persistentVolume:
-          claimName: task-pv-volume
+     volumeClaimTemplates:
+      - metadata:
+         name: task-pv-volume
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        storageClassName: "local-storage"
+        resources:
+          requests:
+            storage: 100Mi
+      
+#      volumes:
+#      - name: task-pv-volume
+#        persistentVolume:
+#          claimName: task-pv-volume
 status: {}
