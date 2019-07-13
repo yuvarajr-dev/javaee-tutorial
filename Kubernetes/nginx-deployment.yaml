@@ -1,12 +1,12 @@
-apiVersion: extensions/v1beta1
+apiVersion: v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose --file Doc/docker-compose.yml convert
-    kompose.version: 1.17.0 (a74acad)
+#  annotations:
+#    kompose.cmd: kompose --file Doc/docker-compose.yml convert
+#    kompose.version: 1.17.0 (a74acad)
   creationTimestamp: null
   labels:
-    io.kompose.service: nginx
+    name: nginx
   name: nginx
 spec:
   replicas: 1
@@ -16,7 +16,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        io.kompose.service: nginx
+        name: nginx
     spec:
       containers:
       - image: nginx:1.13
@@ -32,4 +32,13 @@ spec:
       - name: nginx-pv-volume
         persistentVolume:
           claimName: nginx-pv-volume
+            volumeClaimTemplates:
+      - metadata:
+         name: task-pv-volume
+        spec:
+         accessModes: [ "ReadWriteOnce" ]
+         storageClassName: "local-storage"
+         resources:
+           requests:
+             storage: 100Mi
 status: {}
