@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    kompose.cmd: kompose --file /tmp/docker-compose.yml convert
+    kompose.cmd: kompose --file Doc/docker-compose.yml convert
     kompose.version: 1.17.0 (a74acad)
   creationTimestamp: null
   labels:

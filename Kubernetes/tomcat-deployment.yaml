@@ -6,39 +6,27 @@ metadata:
     kompose.version: 1.17.0 (a74acad)
   creationTimestamp: null
   labels:
-    io.kompose.service: db
-  name: db
+    io.kompose.service: tomcat
+  name: tomcat
 spec:
   replicas: 1
-  strategy:
-    type: Recreate
+  strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        io.kompose.service: db
+        io.kompose.service: tomcat
     spec:
       containers:
       - env:
-        - name: MYSQL_DATABASE
-          value: giit
+        - name: JDBC_URL
+          value: jdbc:mysql://db:3306/giit?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true
         - name: MYSQL_PASSWORD
           value: example_db_pass
-        - name: MYSQL_ROOT_PASSWORD
-          value: admin
         - name: MYSQL_USER
           value: example_db_user
-        image: mysql:latest
-        name: db
-        ports:
-        - containerPort: 3306
+        image: tomcat:latest
+        name: tomcat
         resources: {}
-        volumeMounts:
-        - mountPath: /docker-entrypoint-initdb.d
-          name: db-claim0
       restartPolicy: Always
-      volumes:
-      - name: db-claim0
-        persistentVolumeClaim:
-          claimName: db-claim0
 status: {}
