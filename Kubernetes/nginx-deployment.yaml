@@ -19,13 +19,13 @@ spec:
         name: nginx
     spec:
       containers:
-      - image: yuvarajmindtree:nginx
+      - image: nginx:latest
         name: nginx
         ports:
         - containerPort: 80
-        resources: {}
-        volumeMounts:
-        - mountPath: /etc/nginx/conf.d
-          name: nginx-pv-volume
+#        resources: {}
+#        volumeMounts:
+#        - mountPath: /etc/nginx/conf.d
+#          name: nginx-pv-volume
       restartPolicy: Always
 status: {}
