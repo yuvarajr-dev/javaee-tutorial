@@ -1,4 +1,4 @@
-def CONTAINER_NAME="javaee-tutorial"
+def CONTAINER_NAME="Tomcat"
 def CONTAINER_TAG="latest"
 def DOCKER_HUB_USER="yuvarajmindtree"
 def HTTP_PORT="8090"
