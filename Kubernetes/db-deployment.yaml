@@ -35,10 +35,10 @@ spec:
         resources: {}
         volumeMounts:
         - mountPath: /docker-entrypoint-initdb.d
-          name: db-claim0
+          name: task-pv-volume
       restartPolicy: Always
       volumes:
-      - name: db-claim0
-        persistentVolumeClaim:
-          claimName: db-claim0
+      - name: task-pv-volume
+        persistentVolume:
+          claimName: task-pv-volume
 status: {}

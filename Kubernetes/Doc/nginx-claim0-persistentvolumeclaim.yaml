@@ -1,10 +1,10 @@
 apiVersion: v1
-kind: PersistentVolumeClaim
+kind: PersistentVolume
 metadata:
   creationTimestamp: null
-  labels:
-    io.kompose.service: nginx-claim0
-  name: nginx-claim0
+#  labels:
+#    io.kompose.service: nginx-pv-volume
+#  name: nginx-pv-volume
 spec:
   accessModes:
   - ReadWriteOnce
