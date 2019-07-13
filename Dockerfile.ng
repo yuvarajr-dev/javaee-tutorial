@@ -1,0 +1,6 @@
+FROM nginx:1.13
+
+COPY ./nginx /etc/nginx/conf.d
+
+EXPOSE 80
+CMD ["nginx"]
