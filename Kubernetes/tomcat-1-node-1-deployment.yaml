@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    kompose.cmd: kompose --file ../docker-compose.yml convert
+    kompose.cmd: kompose --file /tmp/docker-compose.yml convert
     kompose.version: 1.17.0 (a74acad)
   creationTimestamp: null
   labels:
@@ -10,8 +10,7 @@ metadata:
   name: tomcat-1-node-1
 spec:
   replicas: 1
-  strategy:
-    type: Recreate
+  strategy: {}
   template:
     metadata:
       creationTimestamp: null
@@ -19,22 +18,8 @@ spec:
         io.kompose.service: tomcat-1-node-1
     spec:
       containers:
-      - env:
-        - name: JDBC_URL
-          value: jdbc:mysql://db:3306/giit?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true
-        - name: MYSQL_PASSWORD
-          value: example_db_pass
-        - name: MYSQL_USER
-          value: example_db_user
-        image: tomcat:latest
+      - image: yuvarajmindtree/tomcat:latest
         name: tomcat-1-node-1
         resources: {}
-        volumeMounts:
-        - mountPath: /usr/local/tomcat/webapps
-          name: tomcat-1-node-1-claim0
       restartPolicy: Always
-      volumes:
-      - name: tomcat-1-node-1-claim0
-        persistentVolumeClaim:
-          claimName: tomcat-1-node-1-claim0
 status: {}

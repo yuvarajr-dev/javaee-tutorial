@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    kompose.cmd: kompose --file ../docker-compose.yml convert
+    kompose.cmd: kompose --file /tmp/docker-compose.yml convert
     kompose.version: 1.17.0 (a74acad)
   creationTimestamp: null
   labels:
