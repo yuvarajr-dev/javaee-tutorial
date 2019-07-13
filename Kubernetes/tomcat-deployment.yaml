@@ -25,7 +25,7 @@ spec:
           value: example_db_pass
         - name: MYSQL_USER
           value: example_db_user
-        image: tomcat:latest
+        image: yuvarajmindtree:tomcat
         name: tomcat
         resources: {}
       restartPolicy: Always

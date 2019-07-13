@@ -33,29 +33,5 @@ spec:
         ports:
         - name: db
           containerPort: 3306
-#        resources: {}
-        volumeMounts:
-        - mountPath: /docker-entrypoint-initdb.d
-          name: task-pv-volume
-          restartPolicy: Always
-        volumes:
-        - name: task-pv-volume
-          gcePersistentDisk:
-            # This disk must already exist.
-            pdName: task-pv-volume
-            fsType: ext4
-#        volumeClaimTemplates:
-#        - metadata:
-#          name: task-pv-volume
-#          spec:
-#            accessModes: [ "ReadWriteOnce" ]
-#            storageClassName: "local-storage"
-#            resources:
-#              requests:
-#                storage: 100Mi
-      
-#      volumes:
-#      - name: task-pv-volume
-#        persistentVolume:
-#          claimName: task-pv-volume
+      image: yuvarajmindtree/db
 status: {}
