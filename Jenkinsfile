@@ -22,6 +22,7 @@ node {
     stage('Sonar'){
         try {
             sh "mvn sonar:sonar"
+            sh "
         } catch(error){
             echo "The sonar server could not be reached ${error}"
        }
@@ -40,7 +41,9 @@ node {
             pushToImage(CONTAINER_NAME, CONTAINER_TAG, USERNAME, PASSWORD)
         }
     }
-
+sshagent (credentials: ['SSH-pass']) {
+    sh 'ssh -o StrictHostKeyChecking=no ./target/giit.war devopsadmin@gjndo7362dns2.eastus2.cloudapp.azure.com:./javaee-tutorial/tomcat/'
+  }
 //    stage('Run App'){
 //        runApp(CONTAINER_NAME, CONTAINER_TAG, DOCKER_HUB_USER, HTTP_PORT)
 //    }
