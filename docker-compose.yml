@@ -13,7 +13,7 @@ db:
 
 # First node of the first Tomcat virtual host.
 tomcat_1_node_1:
-  image: yuvarajmindtree/tomcat:latest
+  image: tomcat:latest
   # Environment variables do not appear to be getting loaded the first time Tomcat starts!
   environment:
   #  VIRTUAL_HOST: tomcat_1.mulligan.ie
@@ -21,10 +21,10 @@ tomcat_1_node_1:
     JDBC_URL: jdbc:mysql://db:3306/giit?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true
     MYSQL_USER: example_db_user
     MYSQL_PASSWORD: example_db_pass
-#  volumes:
-#    - ./warfiel:/usr/local/tomcat/webapps
- # ports:
- #   - "8080:8080"
+  volumes:
+    - ./tomcat:/usr/local/tomcat/webapps
+  ports:
+    - "8080:8080"
   links:
     - db
 
@@ -39,9 +39,9 @@ tomcat_1_node_2:
     MYSQL_USER: example_db_user
     MYSQL_PASSWORD: example_db_pass
   volumes:
-    - ./warfiel:/usr/local/tomcat/webapps
-  #ports:
-  #  - "8080:8080"
+    - ./tomcat:/usr/local/tomcat/webapps
+  ports:
+    - "8080:8080"
   links:
     - db
 

@@ -42,7 +42,7 @@ node {
         }
     }
 sshagent (credentials: ['SSH-pass']) {
-    sh 'ssh -o StrictHostKeyChecking=no ./target/giit.war devopsadmin@gjndo7362dns2.eastus2.cloudapp.azure.com:./javaee-tutorial/tomcat/'
+    sh "ssh -o StrictHostKeyChecking=no ./target/giit.war devopsadmin@gjndo7362dns2.eastus2.cloudapp.azure.com:./javaee-tutorial/tomcat/"
   }
 //    stage('Run App'){
 //        runApp(CONTAINER_NAME, CONTAINER_TAG, DOCKER_HUB_USER, HTTP_PORT)
