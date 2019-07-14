@@ -2,24 +2,29 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
+  labels:
+    app: tomcat
+
 #    kompose.cmd: kompose --file docker-compose.yml convert
 #    kompose.version: 1.17.0 (a74acad)
   creationTimestamp: null
-  labels:
+#  labels:
 #    io.kompose.service: tomcat-1-node-1
   name: tomcat
 spec:
-  replicas: 1
   selector:
+    matchLabels:
+      app: tomcat
+  replicas: 1
 #  strategy:
 #    type: Recreate
   template:
     metadata:
       creationTimestamp: null
       labels:
+        app: tomcat
 #        io.kompose.service: tomcat-1-node-1
     spec:
-     selector:
      containers:
       - env:
         - name: JDBC_URL
