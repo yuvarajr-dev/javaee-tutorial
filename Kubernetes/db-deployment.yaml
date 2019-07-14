@@ -27,8 +27,6 @@ spec:
           value: giit
         - name: MYSQL_PASSWORD
           value: example_db_pass
-        - name: MYSQL_ROOT_PASSWORD
-          value: admin
         - name: MYSQL_USER
           value: example_db_user
         - name: MYSQL_ROOT_PASSWORD
