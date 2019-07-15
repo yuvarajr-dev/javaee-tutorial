@@ -51,7 +51,7 @@
                                 <input class="form-control" placeholder="account name" name="username" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="password" name="password" type="password">
+                                <input class="form-control" placeholder="password" name="yuvaraj" type="password">
                             </div>
                             <div class="checkbox">
                                 <label>
