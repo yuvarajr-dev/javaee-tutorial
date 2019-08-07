@@ -43,10 +43,10 @@ node {
     stage('Copy requiredfile to deployment'){
         sshagent (credentials: ['SSH-pass']) {
            sh "scp -o StrictHostKeyChecking=no ./target/giit.war devopsadmin@gjndo7362dns2.eastus2.cloudapp.azure.com:./javaee-tutorial/tomcat/"
-  }
-    stage('Run App'){
-        sh "ssh -o StrictHostKeyChecking=no "cd ~/javaee-tutorial && docker-compose up"
-}
+#  }
+#    stage('Run App'){
+#        sh "ssh -o StrictHostKeyChecking=no "cd ~/javaee-tutorial && docker-compose up"
+#}
 }
 }
 
